@@ -1,0 +1,19 @@
+FROM python:3.11-slim
+ARG UI_USERNAME
+ARG UI_PASSWORD
+ARG OPEN_API_KEY
+
+ENV UI_USERNAME=$UI_USERNAME
+ENV UI_PASSWORD=$UI_PASSWORD
+ENV OPEN_API_KEY=$OPEN_API_KEY
+
+WORKDIR /usr/src/app
+
+COPY requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+COPY src/ ./src
+COPY setup.py .
+COPY README.md .
+RUN python -m pip install .
+
+CMD ["python", "src/ui/app.py"]

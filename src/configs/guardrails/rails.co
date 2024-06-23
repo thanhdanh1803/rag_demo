@@ -1,0 +1,12 @@
+# Basic guardrail against insults.
+define flow
+  user express insult
+  bot express calmly willingness to help
+# define RAG intents and flow
+# Here we use the QA chain for anything else.
+define flow self check input
+  $allowed = execute self_check_input
+  if not $allowed
+    bot refuse to respond
+    stop
+

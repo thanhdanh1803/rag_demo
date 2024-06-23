@@ -1,0 +1,10 @@
+.cache
+.idea
+.ipynb_checkpoints
+build
+dist
+playground
+*.egg-info
+venv
+*.iml
+*.log
