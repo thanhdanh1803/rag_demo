@@ -39,7 +39,7 @@ def build_prompt():
     Context: {context}
     Chat History: {chat_history}
     This is the question you need to answer: {question}
-    Remember to create the answer based on the given context only, and return sorry if the question asks something besides the given information
+    Remember to create the answer based on the given context only.
     """
 
     message_prompt = HumanMessagePromptTemplate.from_template(template)
