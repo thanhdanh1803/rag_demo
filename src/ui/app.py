@@ -114,4 +114,4 @@ app.launch(auth=fix_auth,
            share=False,
            auth_message="Please login to access the app",
            server_name="0.0.0.0",
-           server_port=433)
+           server_port=8080)
