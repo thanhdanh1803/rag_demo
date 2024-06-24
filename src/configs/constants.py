@@ -9,8 +9,8 @@ def _get_env(env_name: str, default=None, required=False):
 
 
 LOG_LEVEL = _get_env("LOG_LEVEL", "INFO")
-USERNAME = _get_env("USERNAME", None, False)
-PASSWORD = _get_env("PASSWORD", None, False)
+USERNAME = _get_env("USERNAME", "admin", False)
+PASSWORD = _get_env("PASSWORD", "admin", False)
 API_KEY = _get_env("API_KEY", None, False)
 
 AWS_REGION = _get_env("AWS_REGION", "ap-southeast-1")

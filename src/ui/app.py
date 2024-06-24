@@ -110,6 +110,8 @@ with gr.Blocks() as app:
 
     message.submit(handle_question, [message, chatbot, file_input, dropdown],
                    [message, chatbot])
-app.launch(share=False,
+app.launch(auth=fix_auth,
+           share=False,
            auth_message="Please login to access the app",
-           server_name="0.0.0.0")
+           server_name="0.0.0.0",
+           server_port=433)
