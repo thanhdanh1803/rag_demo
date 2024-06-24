@@ -72,7 +72,7 @@ async def handle_question(question, history, uploaded_file, document):
         raise gr.Error("Please upload a file or select a document")
 
     # do rag
-    retriever = doc.as_retriever()
+    retriever = doc.as_retriever(search_kwargs={"k": 5})
     prompt = build_prompt()
     # guardrails = RunnableRails(rails_config, input_key="question") # guardrails currently reduce the performance
     rag_chain = ({
