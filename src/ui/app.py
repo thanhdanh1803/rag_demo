@@ -41,7 +41,7 @@ async def handle_question(question, history, uploaded_file, document):
     retriever = doc.as_retriever(search_kwargs={"k": 5})
     rag_chain = get_rag_chain(retriever)
     response = await rag_chain.ainvoke(
-        {"question": question, "chat_history": _build_history(history)})
+        {"question": question, "chat_history": build_history(history)})
     history.append((question, response))
     return "", history
 
