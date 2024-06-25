@@ -18,3 +18,5 @@ AWS_ACCESS_KEY_ID = _get_env("AWS_ACCESS_KEY_ID", None, False)
 AWS_SECRET_ACCESS_KEY = _get_env("AWS_SECRET_ACCESS_KEY", None, False)
 AWS_OPENSEARCH_DOMAIN = "demo-search"
 AWS_OPENSEARCH_URL = "search-demo-vector-euixqkbwguqw2asissoroz2fva.ap-southeast-1.es.amazonaws.com"
+
+OPENAI_MODEL = "gpt-3.5-turbo"

@@ -7,4 +7,4 @@ opensearch-py==2.6.0
 requests-aws4auth==1.2.2
 pypdf==4.2.0
 docx2txt==0.8
-# nemoguardrails==0.9.0
+deepeval==0.21.60

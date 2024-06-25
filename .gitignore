@@ -8,3 +8,5 @@ playground
 venv
 *.iml
 *.log
+__pycache__/
+*.py[cod]
